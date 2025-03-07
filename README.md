@@ -82,7 +82,7 @@ data/
 │   ├── image1.jpg
 │   └── image2.jpg
 ├── train_mask/
-│   ├── image1*.png```markdown
+│   ├── image1*.png
 
 
 ```

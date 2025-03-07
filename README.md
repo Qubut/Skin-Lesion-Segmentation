@@ -1,7 +1,7 @@
 # Skin Lesion Segmentation with UNet
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.12-blue)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange)](https://pytorch.org/)
 
 ## Overview
@@ -86,7 +86,7 @@ data/
 ### Training Modes
 
 #### 1. Standard Training
-
+```
 ```bash
 python train.py \
   data=img_size=256 \

@@ -83,10 +83,13 @@ data/
 │   └── image2.jpg
 ├── train_mask/
 │   ├── image1*.png```markdown
-### Training Modes
 
-#### 1. Standard Training
+
 ```
+
+### Training Modes
+#### 1. Standard Training
+
 ```bash
 python train.py \
   data=img_size=256 \

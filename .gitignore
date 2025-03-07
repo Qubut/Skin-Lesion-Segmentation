@@ -1,4 +1,4 @@
 *.log
 .direnv
-outputs
+outputs/*
 !outputs/.gitkeep

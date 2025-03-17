@@ -3,7 +3,7 @@ import torch
 from torch.utils.data import DataLoader, random_split
 from torchvision.transforms import InterpolationMode
 from pytorch_lightning import LightningDataModule
-from datasets.lesion_dataset_with_augementation import LesionDataset
+from lesion_dataset_with_augementation import LesionDataset
 
 class LesionDataModule(LightningDataModule):
     """

@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import pytorch_lightning as pl
 from torchmetrics.segmentation import DiceScore
-from models.unet_modified import UNetModified
+from unet_modified import UNetModified
 
 class LesionSegmentationModule(pl.LightningModule):
     """

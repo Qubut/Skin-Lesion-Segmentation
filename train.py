@@ -45,7 +45,7 @@ import sys
 sys.path.extend(['/content/Skin-Lesion-Segmentation/skin_lesion_segmentation/models/', '/content/Skin-Lesion-Segmentation/skin_lesion_segmentation/datasets/'])
 from skin_lesion_segmentation.models.lesion_segmentation_module import LesionSegmentationModule
 from skin_lesion_segmentation.models.callbacks import OptunaPruning
-from skin_lesion_segmentation.datasets.lesion_dataset_with_augementation import LesionDataModule
+from skin_lesion_segmentation.datasets.lesion_datamodule import LesionDataModule
 
 # Configure logging
 loguruLogger.remove()

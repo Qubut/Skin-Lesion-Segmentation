@@ -4,6 +4,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torchvision.transforms import InterpolationMode
 import random
+import torch
 
 class RandomAug:
     """
@@ -200,7 +201,7 @@ class LesionDataset(Dataset):
             image, mask = self.augmentor(image, mask)
 
         image = self.normalize(self.to_tensor(image))
-        mask = self.to_tensor(mask)
+        mask = (self.to_tensor(mask)*255).type(torch.uint8)
 
         return image, mask
 

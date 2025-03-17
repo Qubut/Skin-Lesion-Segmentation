@@ -1,4 +1,11 @@
 # Configuration for skin lesion segmentation training
+hydra:
+  run:
+    dir: ${paths.output_dir}  # Hydra output directory controlled by config
+
+paths:
+  output_dir: "./outputs"  # Base directory for all outputs
+
 optimize: False  # Set to True to run hyperparameter search
 data:
   data_path: "./data"
@@ -19,7 +26,7 @@ optuna:
   timeout: 3600
 
 data_module:
-  _target_: skin_lesion_segmentation.LesionDataModule
+  _target_: skin_lesion_segmentation.datasets.lesion_datamodule.LesionDataModule
   data_path: ${data.data_path}
   train_split: ${data.train_split}
   img_size: 256
@@ -28,14 +35,14 @@ data_module:
 
 logger:
   _target_: pytorch_lightning.loggers.CSVLogger
-  save_dir: "logs"
+  save_dir: "logs"  # Relative to ${paths.output_dir}
   name: "default"
   version: "0"
 
 checkpoint:
   _target_: pytorch_lightning.callbacks.ModelCheckpoint
   monitor: "val_dice"
-  dirpath: "checkpoints"
+  dirpath: "checkpoints"  # Relative to ${paths.output_dir}
   filename: "best"
   save_top_k: 1
   mode: "max"

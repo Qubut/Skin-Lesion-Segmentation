@@ -2,3 +2,4 @@
 .direnv
 outputs/*
 !outputs/.gitkeep
+__pycache__
